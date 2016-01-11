@@ -11,7 +11,7 @@ fi
 mkdir output
 #cp template.graphml output/witness.graphml
 genWitness/genWitness $1 > witness.graphml
-sed -i 's/_call[0-9]//g' witness.graphml
+sed -i 's/_call[0-9]*//g' witness.graphml
 mv witness.graphml output
 date2=$(date +"%s")
 diff=$(($date2-$date1))
