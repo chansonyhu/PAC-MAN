@@ -14,7 +14,7 @@ genWitness/genWitness $1 > witness.graphml
 sed -i 's/_call[0-9]*//g' witness.graphml
 mv witness.graphml output
 if [[ ! -s output/witness.graphml ]]; then
-  cp template.graphml output/witness.graphml
+  cp ./template.graphml output/witness.graphml
 fi
 date2=$(date +"%s")
 diff=$(($date2-$date1))
